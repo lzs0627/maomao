@@ -1,0 +1,38 @@
+# VCS
+.svn
+
+# Eclipse
+.settings
+.project
+.buildpath
+.metadata
+
+# IntelliJ IDEA/PhpStorm
+.idea/
+
+
+#ant specific
+dist/
+build/*
+!build/*.xml
+
+#composer
+/vendor
+
+
+#netbeans specific
+nbproject/*
+#!nbproject/project.properties
+#!nbproject/project.xml
+ 
+ 
+#general swap/backup files
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+*.lock
+*.bak
+cache.properties

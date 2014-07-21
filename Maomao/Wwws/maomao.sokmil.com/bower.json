@@ -1,0 +1,26 @@
+{
+  "name": "maomao.sokmil.com",
+  "version": "0.0.1",
+  "authors": [
+    "li_zs <li@videx.co.jp>"
+  ],
+  "description": "maomao framework",
+  "main": "index.js",
+  "keywords": [
+    "maomao",
+    "php"
+  ],
+  "license": "MIT",
+  "homepage": "iqnote21.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

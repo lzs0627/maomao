@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="maomao" default="build">
+	<property name="php.tools.path" value="vendor/bin"/>
+	
+	<target name="build" 
+			depends="common,phpunit,phploc,pdepend,phpmd,phpcs,phpcpd,phpcb"/>
+	
+	<target name="winbuild" 
+			depends="common,phpunit.bat,phploc.bat,pdepend.bat,phpmd.bat,phpcs.bat,phpcpd.bat,phpcb.bat"/>
+	
+	<target name="common"
+			depends="prepare,lint"/>
+	
+	<target name="phpunit" description="Run unit tests with PHPUnit">
+		<exec executable="${php.tools.path}/phpunit" failonerror="true">
+			<arg line="--configuration ./Tests/phpunit.xml"/>
+		</exec>
+    </target>
+	
+	<target name="phpunit.bat" description="Run unit tests with PHPUnit">
+		<exec executable="${php.tools.path}/phpunit.bat" failonerror="true">
+			<arg line="--configuration ./Tests/phpunit.xml"/>
+		</exec>
+    </target>
+	
+	<target name="clean" description="Cleanup build artifacts">
+        <delete dir="${basedir}/build/api"/>
+        <delete dir="${basedir}/build/code-browser"/>
+        <delete dir="${basedir}/build/coverage"/>
+        <delete dir="${basedir}/build/logs"/>
+        <delete dir="${basedir}/build/pdepend"/>
+        <!--<delete dir="${basedir}/build/phpdox"/>-->
+    </target>
+	
+	<target name="prepare" depends="clean" description="Prepare for build">
+        <mkdir dir="${basedir}/build/api"/>
+        <mkdir dir="${basedir}/build/code-browser"/>
+        <mkdir dir="${basedir}/build/coverage"/>
+        <mkdir dir="${basedir}/build/logs"/>
+        <mkdir dir="${basedir}/build/pdepend"/>
+        <!--<mkdir dir="${basedir}/build/phpdox"/>-->
+    </target>
+	
+	<target name="lint" description="Perform syntax check of sourcecode files">
+        <apply executable="php" failonerror="true">
+            <arg value="-l"/>
+            <fileset dir="${basedir}/Maomao">
+				<include name="**/*.php"/>
+				<modified/>
+			</fileset>
+        </apply>
+    </target>
+	
+	<!-- PHPLoc (Lines Of Code) report -->  
+	<target name="phploc" description="Measure project size using PHPLOC">
+		<exec executable="${php.tools.path}/phploc">
+			<arg value="--log-csv" />
+			<arg value="${basedir}/build/logs/phploc.csv" />
+			<arg path="${basedir}/Maomao" />
+		</exec>
+	</target>
+	<target name="phploc.bat" description="Measure project size using PHPLOC">
+		<exec executable="${php.tools.path}/phploc.bat">
+			<arg value="--log-csv" />
+			<arg value="${basedir}/build/logs/phploc.csv" />
+			<arg path="${basedir}/Maomao" />
+		</exec>
+	</target>
+	<!-- 品質測定 -->
+	<target name="pdepend" description="Calculate software metrics using PHP_Depend">
+        <exec executable="${php.tools.path}/pdepend">
+            <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml"/>
+            <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg"/>
+            <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg"/>
+            <arg path="${basedir}/Maomao"/>
+        </exec>
+    </target>
+	<target name="pdepend.bat" description="Calculate software metrics using PHP_Depend">
+        <exec executable="${php.tools.path}/pdepend.bat">
+            <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml"/>
+            <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg"/>
+            <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg"/>
+            <arg path="${basedir}/Maomao"/>
+        </exec>
+    </target>
+	
+	<!--バグの可能性,準最適なコード,複雑な式,未使用パラメータ，メソッド，プロパティについて検出-->
+	<target name="phpmd"
+            description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
+        <exec executable="${php.tools.path}/phpmd">
+            <arg path="${basedir}/Maomao"/>
+            <arg value="xml"/>
+            <arg value="${basedir}/build/phpmd.xml"/>
+			<arg value="--reportfile"/>
+            <arg value="${basedir}/build/logs/pmd.xml"/>
+            <arg value="--exclude"/>
+            <arg value="*/tmp/*"/>
+        </exec>
+    </target>
+	<target name="phpmd.bat"
+            description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
+        <exec executable="${php.tools.path}/phpmd.bat">
+            <arg path="${basedir}/Maomao"/>
+            <arg value="xml"/>
+            <arg value="${basedir}/build/phpmd.xml"/>
+			<arg value="--reportfile"/>
+            <arg value="${basedir}/build/logs/pmd.xml"/>
+            <arg value="--exclude"/>
+            <arg value="*/tmp/*"/>
+        </exec>
+    </target>
+	
+	<!--coding style-->
+	<target name="phpcs"
+            description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
+        <exec executable="${php.tools.path}/phpcs">
+            <arg value="--report=checkstyle"/>
+            <arg value="--report-file=${basedir}/build/logs/checkstyle.xml"/>
+            <arg value="--standard=${basedir}/build/phpcs.xml"/>
+            <arg value="--ignore=*.js"/>
+            <arg path="${basedir}/Maomao"/>
+        </exec>
+    </target>
+	<target name="phpcs.bat"
+            description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
+        <exec executable="${php.tools.path}/phpcs.bat">
+            <arg value="--report=checkstyle"/>
+            <arg value="--report-file=${basedir}/build/logs/checkstyle.xml"/>
+            <arg value="--standard=${basedir}/build/phpcs.xml"/>
+            <arg value="--ignore=*.js"/>
+            <arg path="${basedir}/Maomao"/>
+        </exec>
+    </target>
+	
+	
+	<!--冗長化したコードを自動で検出-->
+	<target name="phpcpd" description="Find duplicate code using PHPCPD">
+        <exec executable="${php.tools.path}/phpcpd">
+            <arg value="--log-pmd"/>
+            <arg value="${basedir}/build/logs/pmd-cpd.xml"/>
+            <arg value="--exclude"/>
+            <arg value="storage"/>
+            <arg value="--exclude"/>
+            <arg value="config"/>
+            <arg path="${basedir}/Maomao"/>
+        </exec>
+    </target>
+	<target name="phpcpd.bat" description="Find duplicate code using PHPCPD">
+        <exec executable="${php.tools.path}/phpcpd.bat">
+            <arg value="--log-pmd"/>
+            <arg value="${basedir}/build/logs/pmd-cpd.xml"/>
+            <arg value="--exclude"/>
+            <arg value="storage"/>
+            <arg value="--exclude"/>
+            <arg value="config"/>
+            <arg path="${basedir}/Maomao"/>
+        </exec>
+    </target>
+	<!--コードを整形-->
+	<target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
+        <exec executable="${php.tools.path}/phpcb">
+            <arg value="--log"/>
+            <arg path="${basedir}/build/logs"/>
+            <arg value="--source"/>
+            <arg path="${basedir}/Maomao"/>
+            <arg value="--output"/>
+            <arg path="${basedir}/build/code-browser"/>
+        </exec>
+    </target>
+	<target name="phpcb.bat" description="Aggregate tool output with PHP_CodeBrowser">
+        <exec executable="${php.tools.path}/phpcb.bat">
+            <arg value="--log"/>
+            <arg path="${basedir}/build/logs"/>
+            <arg value="--source"/>
+            <arg path="${basedir}/Maomao"/>
+            <arg value="--output"/>
+            <arg path="${basedir}/build/code-browser"/>
+        </exec>
+    </target>
+</project>

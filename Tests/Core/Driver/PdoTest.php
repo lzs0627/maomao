@@ -22,13 +22,13 @@ class PdoTest extends \PHPUnit_Framework_TestCase{
     
     public function testSelect()
     {
-        $pdo = new Database\Driver\Pdo('pdo_connection', $this->db_config);
+        //$pdo = new Database\Driver\Pdo('pdo_connection', $this->db_config);
         
-        $sql = "Select * From s_shopsite where shopsiteid=1000";
+        //$sql = "Select * From s_shopsite where shopsiteid=1000";
         
-        $result = $pdo->query($sql);
+        //$result = $pdo->query($sql);
                 
-        $this->assertTrue(count($result) > 0);
+        //$this->assertTrue(count($result) > 0);
         
     }
     

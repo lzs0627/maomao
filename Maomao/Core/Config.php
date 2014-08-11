@@ -7,9 +7,8 @@ namespace Maomao\Core;
  *
  * @author lizhaoshi
  */
+class Config extends Object {
 
-class Config extends Object
-{
     /**
      *
      * @var Array
@@ -28,8 +27,7 @@ class Config extends Object
      * @param  mixed  $default
      * @return mixed  Description
      */
-    public static function get($key, $default = null)
-    {
+    public static function get($key, $default = null) {
         if (is_null($key)) {
             return static::$dataStore;
         }
@@ -55,15 +53,13 @@ class Config extends Object
         static::$dataCache[$key] = $arr;
 
         return $arr;
-
     }
 
     /**
      * @param string $key   "."で繋ぐ文字列
      * @param mixd   $value 保存する値
      */
-    public static function set($key, $value)
-    {
+    public static function set($key, $value) {
         if (is_string($key)) {
 
             if (isset(static::$dataCache[$key])) {
@@ -84,14 +80,12 @@ class Config extends Object
             }
 
             $arr[array_shift($keys)] = $value;
-
         } else {
             throw new \InvalidArgumentException("key must be a dot-notated string.");
         }
     }
 
-    public static function setup($default_path, $target_path)
-    {
+    public static function setup($default_path, $target_path) {
         $default_config_set = array();
         $default_files = new \DirectoryIterator($default_path);
 
@@ -112,11 +106,13 @@ class Config extends Object
             }
         }
 
-        foreach ($default_config_set as $k=>$config) {
+        foreach ($default_config_set as $k => $config) {
             if (isset($target_config_set[$k])) {
                 $config = array_replace_recursive($config, $target_config_set[$k]);
                 static::set($k, $config);
                 unset($target_config_set[$k]);
+            } else {
+                static::set($k, $config);
             }
         }
 
@@ -125,7 +121,6 @@ class Config extends Object
                 static::set($k, $config);
             }
         }
-
     }
 
 }

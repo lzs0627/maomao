@@ -9,7 +9,7 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ENV', 'Test');
 
 //app root
-define('APPPATH', realpath(__DIR__.'/../Maomao/Apps') . DS);
+define('APPPATH', realpath(__DIR__.'/../Maomao/App') . DS);
 
 //core root
 define('COREPATH', realpath(__DIR__.'/../Maomao/Core') . DS);

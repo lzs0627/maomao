@@ -15,7 +15,7 @@ class Object
         if (property_exists($this, $name)) {
             return $this->$name;
         } else {
-            throw new LogicException(sprintf('Undefined property: $%s', $name));
+            throw new \LogicException(sprintf('Undefined property: $%s', $name));
         }
     }
 
@@ -24,7 +24,7 @@ class Object
         if (property_exists($this, $name)) {
             $this->$name = $value;
         } else {
-            throw new LogicException(sprintf('Undefined property: $%s', $name));
+            throw new \LogicException(sprintf('Undefined property: $%s', $name));
         }
     }
 }

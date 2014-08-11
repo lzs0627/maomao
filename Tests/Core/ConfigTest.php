@@ -12,7 +12,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
     {
 
         $db = Config::get('db');
-        var_dump($db);
+        
         $this->assertTrue(is_array($db));
         $this->assertTrue(Config::get('db.active') === 'default');
     }

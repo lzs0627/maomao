@@ -18,10 +18,14 @@ class Template extends Object
     // view data
     protected $data;
 
+    //params
+    protected $params;
 
-    public function __construct() {
+
+    public function __construct($params = array()) {
         $this->name = substr(strrchr(get_class($this), "\\"), 1);
         $this->data = array();
+        $this->params = $params;
     }
     
     protected function beforeAction()

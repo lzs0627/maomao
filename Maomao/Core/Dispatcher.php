@@ -10,7 +10,8 @@ namespace Maomao\Core;
 class Dispatcher extends Object{
     
     protected $webroot;
-    
+    const CONTROLLER_NAMESPACE = "\\Maomao\\App\\Controller\\";
+
     public function __construct($webroot = '') 
     {
         $this->webroot = trim($webroot, '/');
@@ -29,9 +30,10 @@ class Dispatcher extends Object{
         
         if ($r && isset($r['controller'][0]) && isset($r['controller'][1])) {
             
-            $constucter = '\\Maomao\\App\\Controller\\' . ucfirst($r['controller'][0]);
+            $constucter = static::CONTROLLER_NAMESPACE . ucfirst($r['controller'][0]);
             $action = $r['controller'][1];
-            $controller = new $constucter();
+            $params = isset($r['params']) ? $r['params'] : array();
+            $controller = new $constucter($params);
             $controller->loadAction($action);
             
         } else {

@@ -6,7 +6,7 @@ use Maomao\Core\Config as Config;
  */
 require COREPATH . 'AutoLoader.php';
 
-AutoLoader::addNamespage('Maomao\\App\\Controller', __DIR__ . DS . 'Controller' . DS);
+AutoLoader::addNamespage('Maomao\\App', __DIR__ . DS);
 
 // Boot the core
 require COREPATH.'bootstrap.php';

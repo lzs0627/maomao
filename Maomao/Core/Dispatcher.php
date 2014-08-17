@@ -37,8 +37,14 @@ class Dispatcher extends Object{
             $controller->loadAction($action);
             
         } else {
+            if (class_exists(static::CONTROLLER_NAMESPACE.'Error')) {
+                $error_controller = static::CONTROLLER_NAMESPACE.'Error';
+                $controller = new $error_controller();
+                $controller->loadAction('notFound');
+            } else {
+                Controller\Error::notfound();
+            }
             
-            trigger_error("Not Found ..." . $uri);
         }
     }
     

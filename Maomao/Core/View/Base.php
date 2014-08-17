@@ -25,10 +25,10 @@ class Base extends Object{
     public function render($viewfile)
     {
         extract($this->data);
-        
+
         ob_start();
         require APPPATH . 'View' . DS . $viewfile;
-        $layout_content = ob_get_flush();
+        $layout_content = ob_get_clean();
         
         require APPPATH . 'View' . DS . 'Layout' . DS . $this->layout;
     }

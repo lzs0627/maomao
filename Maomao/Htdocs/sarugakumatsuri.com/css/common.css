@@ -1,14 +1,35 @@
-.about{
+.content{
+    margin-left: 34%;
+    background: #245269;
+    padding-bottom: 100px;
+    padding-top: 15px;
+    min-width: 850px;
+    overflow-y: scroll;
+}
+.panel{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 34%;
+    padding:10px;
+}
+.panel .well{
+    font-size: 14px;
+}
+.topimgbg li{
     display: block;
     position: absolute;
     z-index: 102;
     left: 0;
-    top: 50%;
-    margin-top: -176px;
-    width: 100%;
+    top: 0;
+    margin: 0;
     text-align: center;
+    overflow: hidden;
 }
-
+.topimgbg li img{
+    margin: 0;
+    width: 100%;
+}
 /**Footer**/
 #footer{
     width: 100%;

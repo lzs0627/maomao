@@ -47,12 +47,87 @@
                 <li><img class="img-bg" src="img/top1.jpg" /></li>
             </ul>
             <div class="about" style="display: block;text-align: center;position: absolute;z-index: 104;top:50%;margin-top: -200px;width: 100%;">
-				<p class="logo1"><img src="img/logo.jpg"  alt="代官山恒例の「猿楽祭―さるがくまつり」"></p>
-				<p class="txt1" style="font-size: 14px;color: #fff;">代官山恒例の「猿楽祭―さるがくまつり」、今年は10月12-13日の開催です。</p>
-			</div>
+      				<p class="logo1"><img src="img/logo.jpg"  alt="代官山恒例の「猿楽祭―さるがくまつり」"></p>
+      				<p class="txt1" style="font-size: 14px;color: #fff;">代官山恒例の「猿楽祭―さるがくまつり」、今年は10月12-13日の開催です。</p>
+      			</div>
         </div>
         <div class="section" data-anchor="cat1">
-            
+            <div class="slide">
+              <div class="content">
+                
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
+                    <div class="thumbnail">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
+                      <div class="caption">
+                        <h2>Thumbnail label</h2>
+                      </div>
+                    </div>
+                </div>
+               
+               
+            </div>
+            <div class="panel">
+                <div class="page-header">
+                    <h1>カテゴリ名 <small>カテゴリ名</small></h1>
+                </div>
+                <div class="well">
+                    kカテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
+                    カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
+                    カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
+                    カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
+                </div>
+            </div>
+            </div>
+            <div class="slide">
             <div class="content">
                 
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
@@ -126,83 +201,9 @@
                     カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
                 </div>
             </div>
-        </div>
-        <div class="section" data-anchor="cat2">
-        <div class="content">
-                
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
-                    <div class="thumbnail">
-                      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" alt="...">
-                      <div class="caption">
-                        <h2>Thumbnail label</h2>
-                      </div>
-                    </div>
-                </div>
-               
-               
             </div>
-            <div class="panel">
-                <div class="page-header">
-                    <h1>カテゴリ名 <small>カテゴリ名</small></h1>
-                </div>
-                <div class="well">
-                    kカテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
-                    カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
-                    カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
-                    カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
-                </div>
-            </div></div>
-        <div class="section" data-anchor="cat3">
-        <div class="content">
+        <div class="slide">
+              <div class="content">
                 
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
                     <div class="thumbnail">
@@ -275,10 +276,9 @@
                     カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
                 </div>
             </div>
-                
-        </div>
-        <div class="section" data-anchor="cat4">
-        <div class="content">
+            </div>
+            <div class="slide">
+            <div class="content">
                 
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
                     <div class="thumbnail">
@@ -351,9 +351,9 @@
                     カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
                 </div>
             </div>
-        </div>
-        <div class="section" data-anchor="cat5">
-        <div class="content">
+            </div>
+            <div class="slide">
+            <div class="content">
                 
                 <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4">
                     <div class="thumbnail">
@@ -425,6 +425,7 @@
                     カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
                     カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明カテゴリ説明
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -433,11 +434,11 @@
         <div id="cat-link" class="container">
             <ul class="nav navbar-nav" id="menu">
                 <li data-menuanchor="top"><a class="anm_button" href="#top">猿楽祭</a></li>
-                <li data-menuanchor="cat1"><a class="anm_button" href="#cat1">カテゴリ名</a></li>
-                <li data-menuanchor="cat2"><a href="#cat2" class="anm_button">カテゴリ名</a></li>
-                <li data-menuanchor="cat3"><a href="#cat3" class="anm_button">カテゴリ名</a></li>
-                <li data-menuanchor="cat4"><a href="#cat4" class="anm_button">カテゴリ名</a></li>
-                <li data-menuanchor="cat5"><a href="#cat5" class="anm_button">カテゴリ名</a></li>
+                <li data-menuanchor="cat1"><a class="anm_button" href="#cat1/1">カテゴリ名</a></li>
+                <li data-menuanchor="cat1"><a href="#cat1/2" class="anm_button">カテゴリ名</a></li>
+                <li data-menuanchor="cat1"><a href="#cat1/3" class="anm_button">カテゴリ名</a></li>
+                <li data-menuanchor="cat1"><a href="#cat1/4" class="anm_button">カテゴリ名</a></li>
+                <li data-menuanchor="cat1"><a href="#cat1/5" class="anm_button">カテゴリ名</a></li>
             </ul>
         </div>
         <div id="bottom-link">

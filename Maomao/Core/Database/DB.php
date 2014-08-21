@@ -26,7 +26,7 @@ class DB extends Object
     public static function instance($name = null, array $config = null)
     {
         if ($name === null) {
-            $name = Config::get("db.default");
+            $name = Config::get("db.active");
         }
 
         if (! isset(static::$instances[$name])) {

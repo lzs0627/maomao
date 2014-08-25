@@ -5,6 +5,9 @@ namespace Maomao\Core\Model;
 
 use Maomao\Core\Object as Object;
 use Maomao\Core\Database\DB as DB;
+use Maomao\Core\Database\Driver as DB_Driver;
+
+
 /**
  * Description of DB
  *
@@ -16,7 +19,10 @@ class Base extends Object
 	protected $db_wirte;
 	protected $db_read;
 
-	protected $prepare_sql;
+    protected $query_type;
+
+
+    protected $prepare_sql;
 
 	CONST NO_ESCAPE_PREFIX = '__NOESCAPE__::';
 
@@ -26,9 +32,15 @@ class Base extends Object
 		$this->db_wirte = DB::instance($db_write_name);
 	}
 
-
+    public function __destruct() {
+        $this->db_read->disconnect();
+        $this->db_write->disconnect();
+    }
+    
 	public function select($arr_fields)
 	{
+        $this->query_type = DB_Driver::SELECT_TYPE;
+        
 		$select = array();
 
 		if (! is_array($arr_fields)) {
@@ -51,6 +63,8 @@ class Base extends Object
 
 	public function update($tables, $fields)
 	{
+        $this->query_type = DB_Driver::UPDATE_TYPE;
+        
 		if (! is_array($tables)) {
 			$tables = array($tables);
 		}
@@ -84,6 +98,7 @@ class Base extends Object
 
 	public function delete($tables = null)
 	{
+        $this->query_type = DB_Driver::DELETE_TYPE;
 		if (is_null($tables)) {
 			$this->prepare_sql = 'DELETE';
 		} else {
@@ -93,6 +108,7 @@ class Base extends Object
 
 	public function insert($table, $field_vals)
 	{
+        $this->query_type = DB_Driver::INSERT_TYPE;
 		$this->prepare_sql = 'INSERT INTO ' . $table;
 
 		$fields = array();
@@ -176,7 +192,13 @@ class Base extends Object
 
 	public function execute()
 	{
-		return $this->prepare_sql;
+        if ($this->query_type == DB_Driver::SELECT_TYPE) {
+            
+            return $this->db_read->query($this->prepare_sql);
+        } else {
+            return $this->db_wirte->query($this->prepare_sql);
+        }
+            
 	}
 
 

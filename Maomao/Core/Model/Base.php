@@ -196,6 +196,7 @@ class Base extends Object
             
             return $this->db_read->query($this->prepare_sql);
         } else {
+        	
             return $this->db_wirte->query($this->prepare_sql);
         }
             

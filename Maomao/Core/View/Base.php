@@ -10,27 +10,25 @@ use Maomao\Core\Object as Object;
  */
 class Base extends Object{
     
-    protected $layout;
+    protected $controller;
     
-    protected $data;
+    protected $action_content;
     
-    
-    public function __construct($layout, $data) {
-        
-        $this->layout = $layout;
-        $this->data = $data;
-        
+    public function __construct($controller) {
+
+        $this->controller = $controller; 
+
     }
     
-    public function render($viewfile)
+    public function render()
     {
-        extract($this->data);
+        extract((array)$this->controller);
 
         ob_start();
         require APPPATH . 'View' . DS . $viewfile;
         $layout_content = ob_get_clean();
         
-        require APPPATH . 'View' . DS . 'Layout' . DS . $this->layout;
+        require APPPATH . 'View' . DS . 'Layout' . DS . $this->tpl_layout;
     }
     
 }

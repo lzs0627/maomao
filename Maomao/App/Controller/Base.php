@@ -8,14 +8,18 @@ use Maomao\Core\Controller\Template as Controller_Template;
  *
  * @author lizhaoshi
  */
-class Error extends Controller_Template{
+class Base extends Controller_Template{
     
     
-    
-    public function notFound()
+    protected function beforeAction()
     {
-        $this->tpl_layout = 'test.php';
-        $this->tpl_action = 'not_found.php';
+        
     }
+    
+    protected function afterAction()
+    {
+        
+    }        
+    
     
 }

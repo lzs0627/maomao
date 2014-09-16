@@ -16,7 +16,7 @@ use Maomao\Core\Database\Driver as DB_Driver;
 class Base extends Object
 {
 	protected $table;
-	protected $db_wirte;
+	protected $db_write;
 	protected $db_read;
 
     protected $query_type;
@@ -29,7 +29,7 @@ class Base extends Object
 	public function __construct($db_read_name = null, $db_write_name = null)
 	{
 		$this->db_read = DB::instance($db_read_name);
-		$this->db_wirte = DB::instance($db_write_name);
+		$this->db_write = DB::instance($db_write_name);
 	}
 
     public function __destruct() {

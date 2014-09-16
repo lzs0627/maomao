@@ -35,12 +35,14 @@ class Dispatcher extends Object{
             $params = isset($r['params']) ? $r['params'] : array();
             $controller = new $constucter($params);
             $controller->loadAction($action);
+            $controller->render();
             
         } else {
             if (class_exists(static::CONTROLLER_NAMESPACE.'Error')) {
                 $error_controller = static::CONTROLLER_NAMESPACE.'Error';
                 $controller = new $error_controller();
                 $controller->loadAction('notFound');
+                $controller->render();
             } else {
                 Controller\Error::notfound();
             }

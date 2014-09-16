@@ -4,27 +4,25 @@ namespace Maomao\Core\Controller;
 use Maomao\Core\Object as Object;
 use Maomao\Core\View\Base as View_Base;
 
-class Template extends Object
+class Template
 {
     //class name
-    protected $name;
+    public $name;
     
     //html layout
-    protected $layout;
+    public $tpl_layout = "layout_default.tpl";
     
     //html action 
-    protected $viewfile;
-
-    // view data
-    protected $data;
+    public $tpl_action;
 
     //params
-    protected $params;
+    public $params;
 
+    //template file extension
+    public $tpl_ext = ".tpl";
 
     public function __construct($params = array()) {
         $this->name = substr(strrchr(get_class($this), "\\"), 1);
-        $this->data = array();
         $this->params = $params;
     }
     
@@ -45,9 +43,24 @@ class Template extends Object
         $this->$action();
         
         $this->afterAction();
+
+        if (! isset($this->tpl_action) || !$this->tpl_action) {
+            $this->tpl_action = $action . $this->tpl_ext;
+        }
+
+
+    }
+
+
+    public function render()
+    {
+//        extract((array)$this);
+
+        ob_start();
+        require APPPATH . 'View' . DS . $this->name . DS . $this->tpl_action;
+        $layout_content = ob_get_clean();
         
-        $ViewBase = new View_Base($this->layout, $this->data);
-        
-        $ViewBase->render($this->name . DS . $this->viewfile);
+        require APPPATH . 'View' . DS . 'Layout' . DS . $this->tpl_layout;
+
     }
 }

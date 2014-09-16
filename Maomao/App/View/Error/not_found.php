@@ -1,2 +1,2 @@
 
-<p>page not found</p>
+<p><?=$this->name?></p>

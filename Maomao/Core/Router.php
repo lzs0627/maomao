@@ -31,7 +31,7 @@ class Router extends Object{
             $match = rtrim(rtrim(trim(trim($setting['match']),'/')),'/');
             $match = str_replace('/', '\/', $match);
             
-            if (! preg_match('/^'.$match.'/', $uri, $params)) {
+            if (! preg_match('/^'.$match.'$/', $uri, $params)) {
                 continue;
             }
             
